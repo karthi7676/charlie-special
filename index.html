@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For My Ammu ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: linear-gradient(to bottom right, #0f0f1a, #1a1a40);
+  color: white;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  padding: 50px;
+}
+
+img {
+  width: 300px;
+  border-radius: 20px;
+  margin-top: 20px;
+  box-shadow: 0 0 25px pink;
+}
+
+h1 {
+  color: #ff4da6;
+}
+
+/* Falling hearts */
+.heart {
+  position: absolute;
+  top: -10px;
+  color: pink;
+  font-size: 20px;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Background Music -->
+<audio autoplay loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="content">
+
+<h1>February 8, 2022 ❤️</h1>
+
+<p>
+Ammu…<br><br>
+
+On this day, my Charlie chose me.<br>
+You didn’t just propose… you gave me forever.<br><br>
+
+Even with miles between us,<br>
+my answer is still the same.<br><br>
+
+I choose you.<br>
+Again.<br>
+And again.<br><br>
+
+Happy the-day-you-proposed-to-me, my Ammu ❤️
+</p>
+
+<img src="yourphoto.jpg" alt="Us">
+
+<p style="margin-top:40px; font-size:20px;">
+If you asked me again today… my answer is still YES.
+</p>
+
+</div>
+
+<script>
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.classList.add("heart");
+  heart.innerHTML = "❤️";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 5000);
+}
+
+setInterval(createHeart, 300);
+</script>
+
+</body>
+</html>
